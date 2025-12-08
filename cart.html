@@ -6,6 +6,8 @@
     <title>Your Cart</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
 
 <a href="product.html" class="cart-btn" style="right:auto; left:20px;">⬅ Back</a>
@@ -16,20 +18,84 @@
 
 <main>
     <section class="cart">
+<div style="display:flex; justify-content:space-between; align-items:center;">
     <h2 style="color: black; font-weight: bold;font-size: xx-large;">Items in Your Cart</h2>
+
+    <!-- Purchases Button -->
+    <button onclick="openPurchases()" 
+        style="padding:10px 15px; background:#222; color:white; border:none; border-radius:5px;">
+        Purchases
+    </button>
+</div>
+
 <section class="gallery">
     <div id="cart-items"></div> </section>
 
-    <h2 style="color: black;font-weight: bold;">Total: ₱<span id="total">0</span></h2>
+    <div class="checkout-area">
+    <h2 style="color: black; font-weight: bold;">Total: ₱<span id="total">0</span></h2>
+    <button class="purchase-btn" onclick="openPayment()">Purchase</button>
+</div>
+
     </section>
 </main>
 
+<script src="payment.js"></script>
+<script src="purchases.js"></script>
 
 <script src="cart.js"></script>
 
 <script>
     displayCart();
 </script>
+
+<!-- Payment Popup Modal -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <h2>Select Payment Method</h2>
+
+        <div class="payment-option">
+            <input type="radio" name="payment" value="Cash">
+            <img src="images/logo1.png" class="payment-icon">
+            <span>Cash</span>
+        </div>
+
+        <div class="payment-option">
+            <input type="radio" name="payment" value="GCash">
+            <img src="images/logo2.png" class="payment-icon">
+            <span>GCash</span>
+        </div>
+
+        <div class="payment-option">
+            <input type="radio" name="payment" value="Maya">
+            <img src="images/logo3.png" class="payment-icon">
+            <span>Maya</span>
+        </div>
+
+        <br>
+
+        <button onclick="finalizeTransaction()">Finalize Transaction</button>
+        <button onclick="closePayment()" class="close-btn">Close</button>
+    </div>
+</div>
+
+<!-- Purchases Popup -->
+<div id="purchasesModal" class="modal">
+    <div class="modal-content">
+        <h2>Purchased Items</h2>
+        <div style="display:flex; justify-content:space-between; font-weight:bold; margin-bottom:10px;">
+    <span>Item</span>
+    <span>Cost</span>
+</div>
+
+        <div id="purchased-items"></div>
+        <h3 style="margin-top:15px;">
+        </h3>
+        <button onclick="closePurchases()" class="close-btn">Close</button>
+    </div>
+</div>
+
+
+
 
 </body>
 </html>
