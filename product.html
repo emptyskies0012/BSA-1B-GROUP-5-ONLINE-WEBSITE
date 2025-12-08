@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    	<img src="images/BP1.jpg" alt="Cannot be loaded" width="200">        
+        <h1>Company Name</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About our Products</h2>
+            <p>Example paragraph.</p>
+        </section>
+        <h2 style="color: rgb(0, 0, 0);font-weight: bold;">Our Products</h2>
+        <a href="cart.html" class="cart-btn">🛒 Cart</a>
+
+        <!-- PRODUCT GRID -->
+        <div class="gallery">
+
+            <!-- Product 1 -->
+            <div class="box">
+                <img src="images/BP1.jpg" alt="Product 1">
+                <h3>Product Name 1</h3>
+                <p>₱100.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="box">
+                <img src="images/BP2.jpg" alt="Product 2">
+                <h3>Product Name 2</h3>
+                <p>₱120.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="box">
+                <img src="images/BP3.jpg" alt="Product 3">
+                <h3>Product Name 3</h3>
+                <p>₱150.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="box">
+                <img src="images/BP4.jpg" alt="Product 4">
+                <h3>Product Name 4</h3>
+                <p>₱180.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="box">
+                <img src="images/BP5.jpg" alt="Product 5">
+                <h3>Product Name 5</h3>
+                <p>₱200.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+
+    </main>
+<script src="cart.js"></script>
+<script>
+    // Attach event listeners to all Add to Cart buttons
+    document.querySelectorAll(".box button").forEach(button => {
+        button.addEventListener("click", function() {
+
+            const productBox = this.parentElement;
+
+            const product = {
+                name: productBox.querySelector("h3").innerText,
+                price: parseFloat(productBox.querySelector("p").innerText.replace("₱", "")),
+                image: productBox.querySelector("img").src,
+                quantity: 1
+            };
+
+            addToCart(product);
+            alert(product.name + " added to cart!");
+        });
+    });
+</script>
+
+</body>
+</html>
