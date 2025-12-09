@@ -17,7 +17,10 @@ function addToCart(product) {
     if (existing) {
         existing.quantity += 1;
     } else {
-        cart.push(product);
+        cart.push({
+            ...product,
+            quantity: 1
+        });
     }
 
     saveCart(cart);
