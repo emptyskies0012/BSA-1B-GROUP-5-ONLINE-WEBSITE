@@ -2,7 +2,7 @@
    GLOBAL PAGE SETTINGS
 ------------------------------ */
 body {
-    font-family: 'Cenzil';
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: #f8f9fa;
     color: #f1eded;
@@ -11,12 +11,18 @@ body {
 }
 
 header {
+    font-family: 'Playfair Display', serif;
     background-color: #0b1a38;
-    color: white;
+    color: #B76E79;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+}
+
+footer {
+    background-color: #000033;
+    text-align: left;
 }
 
 nav a {
@@ -457,3 +463,63 @@ body.index-page .product-item img {
 body.index-page .product-item img:hover {
     transform: scale(1.05);
 }
+
+.advantage-section {
+    background-color: #FFFDD0; /* Cream */
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  /* Container for layout */
+  .advantage-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Headline */
+  .advantage-section .section-title {
+    font-family: 'Playfair Display', serif;
+    color: #001F3F; /* Deepest Navy */
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .advantage-section .section-title .subtitle {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 10px;
+  }
+
+  /* Columns layout */
+  .advantage-section .columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .advantage-section .column {
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
+
+  .advantage-section .icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .advantage-section h3 {
+    font-family: 'Playfair Display', serif;
+    color: #B76E79; /* Rose Gold */
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .advantage-section p {
+    font-family: 'Cenzil', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
