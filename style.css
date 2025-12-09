@@ -10,14 +10,13 @@ body {
     border-color:#131314;
 }
 
-/* ------------------------------
-   HEADER
------------------------------- */
 header {
-    background-color: #bc1515;
+    background-color: #0b1a38;
     color: white;
-    padding: 1rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
 nav a {
@@ -38,6 +37,21 @@ main {
     max-width: 1000px;
     margin: auto;
 }
+
+.titleP{
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cparagraph {
+    color: #000;
+    width: 60%;
+    margin: 0 auto; 
+    text-indent: 2em;   
+    text-align: justify; 
+}
+
 
 section {
     background-color: #e88282;
@@ -64,7 +78,6 @@ section {
     background-color: #f9f9f9;
     width: fit-content;
     height: fit-content;
-    left: 50%;
 }
 .positionA{
     position:absolute;
@@ -168,10 +181,10 @@ footer {
 ------------------------------ */
 .cart-btn {
     position: fixed;
-    top: 20px;
+    top: 130px;
     right: 20px;
-    background-color: #fafaf8;
-    color: rgb(15, 15, 15);
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     padding: 10px 15px;
     border-color: #131314;
     border-radius: 8px;
@@ -273,5 +286,174 @@ footer {
     left: auto;
     margin: auto 0 auto auto;
 }
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* row 1 has 3 items */
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
 
- 
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.product-item {
+    text-align: center;
+}
+
+.product-item img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ------------------------------
+   INDEX PAGE SPECIFIC STYLES
+------------------------------ */
+body.index-page {
+    font-family: 'Cenzil', sans-serif;
+    background-color: #f8f9fa;
+    color: #0f0f0f;
+}
+
+/* HEADER */
+
+body.index-page header .logo {
+    width: 100px;
+    border-radius: 5px;
+}
+
+body.index-page nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+body.index-page nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO SECTION WITH 5 PRODUCT IMAGES */
+body.index-page .hero {
+    position: relative;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    background-color: #0b1a38; /* optional dark background */
+}
+
+/* HERO SECTION */
+body.index-page .hero {
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    height: 400px; /* adjust as needed */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Overlay for text readability */
+body.index-page .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 26, 56, 0.5); /* semi-transparent overlay */
+    z-index: 1;
+}
+
+/* Hero text content */
+body.index-page .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #120356;
+    text-align: center;
+    font-size: larger;
+}
+
+body.index-page .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+body.index-page .hero-btn {
+    background-color: #008060;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+body.index-page .hero-btn:hover {
+    background-color: #006644;
+}
+
+/* Hero products as stretched background */
+body.index-page .hero-products {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* behind overlay and text */
+}
+
+body.index-page .hero-products img {
+    width: 20%; /* 5 images, each takes 20% */
+    height: 100%;
+    object-fit: cover;
+    border-right: 1px solid #fff; /* optional separator line */
+}
+
+body.index-page .hero-products img:last-child {
+    border-right: none;
+}
+
+
+/* PRODUCT PREVIEW GRID */
+body.index-page .product-preview {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+body.index-page .product-preview h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+body.index-page .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+body.index-page .product-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+body.index-page .product-item img:hover {
+    transform: scale(1.05);
+}
