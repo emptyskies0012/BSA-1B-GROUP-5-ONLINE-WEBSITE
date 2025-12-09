@@ -15,6 +15,6 @@ function finalizeTransaction() {
         return;
     }
 
-    alert("Transaction completed using: " + method.value);
+    alert("Payment Successful");
     closePayment();
 }
