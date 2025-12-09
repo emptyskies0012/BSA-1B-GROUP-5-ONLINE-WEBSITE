@@ -16,7 +16,6 @@ function finalizeTransaction() {
     }
 
 
-    alert("Payment Successful");
+    alert("Payment Successful");
+    closePayment();
 }
-
-closePayment();
