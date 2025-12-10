@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
     <header>
         <h1>25th Hour Celebrations</h1>
@@ -28,46 +29,175 @@
         <div class="gallery">
 
             <!-- Product 1 -->
-            <div class="box">
+            <div class="box" onclick="openPopup(1)">
                 <img src="images/BP1.jpg" alt="Product 1">
-                <h3>Product Name 1</h3>
-                <p>₱100.00</p>
+                <h3>Basic Party Package</h3>
+                <p>₱5,999.00</p>
                 <button>Add to Cart</button>
             </div>
 
             <!-- Product 2 -->
-            <div class="box">
+            <div class="box" onclick="openPopup(2)">
                 <img src="images/BP2.jpg" alt="Product 2">
-                <h3>Product Name 2</h3>
-                <p>₱120.00</p>
+                <h3>Birthday Party Package</h3>
+                <p>₱9,999.00</p>
                 <button>Add to Cart</button>
             </div>
 
             <!-- Product 3 -->
-            <div class="box">
+            <div class="box" onclick="openPopup(3)">
                 <img src="images/BP3.jpg" alt="Product 3">
-                <h3>Product Name 3</h3>
-                <p>₱150.00</p>
+                <h3>Kids Party Package</h3>
+                <p>₱12,999.00</p>
                 <button>Add to Cart</button>
             </div>
 
             <!-- Product 4 -->
-            <div class="box">
+            <div class="box"onclick="openPopup(4)">
                 <img src="images/BP4.jpg" alt="Product 4">
-                <h3>Product Name 4</h3>
-                <p>₱180.00</p>
+                <h3>Debut / Wedding Party Package </h3>
+                <p>₱25,999.00</p>
                 <button>Add to Cart</button>
             </div>
 
             <!-- Product 5 -->
-            <div class="box">
-                <img src="images/BP5.jpg" alt="Product 5">
-                <h3>Product Name 5</h3>
-                <p>₱200.00</p>
+            <div class="box"onclick="openPopup(5)">
+                <img src="images/BP5.png" alt="Product 5">
+                <h3>Corporate Event Package</h3>
+                <p>₱30,999.00</p>
                 <button>Add to Cart</button>
             </div>
 
         </div>
+<div id="popup1" class="popup-overlay">
+    <div class="popup-box">
+        <h2>Basic Party Package – ₱5,999</h2>
+
+        <h3>Inclusions:</h3>
+        <ul>
+            <li>Balloon decorations</li>
+            <li>Customized basic backdrop tarpaulin</li>
+            <li>Disposable tableware (for 30 guests)</li>
+            <li>Party banners & posters</li>
+            <li>Party hats & balloons for guests</li>
+        </ul>
+
+        <h3>Services Included:</h3>
+        <ul>
+            <li>Small sound system</li>
+            <li>Party coordinator</li>
+        </ul>
+
+        <p>Best for simple gatherings and small celebrations.</p>
+
+        <button class="close-btn" onclick="closePopup(1)">Close</button>
+    </div>
+</div>
+<div id="popup2" class="popup-overlay">
+    <div class="popup-box">
+        <h2>Birthday Party Package – ₱9,999</h2>
+
+        <h3>Inclusions:</h3>
+        <ul>
+            <li>Themed balloon decorations</li>
+            <li>Customized birthday backdrop tarpaulin</li>
+            <li>Birthday cake</li>
+            <li>Table centerpieces</li>
+            <li>Birthday hats, balloons & party banners</li>
+            <li>Giveaways for guests</li>
+        </ul>
+
+        <h3>Services Included:</h3>
+        <ul>
+            <li>Sound system & microphone</li>
+            <li>Party host & games</li>
+            <li>Party coordinator</li>
+        </ul>
+
+        <p>Perfect for kids, teens, and adult birthdays.</p>
+
+        <button class="close-btn" onclick="closePopup(2)">Close</button>
+    </div>
+</div>
+<div id="popup3" class="popup-overlay">
+    <div class="popup-box">
+        <h2>Kids Party Package – ₱12,999</h2>
+
+        <h3>Inclusions:</h3>
+        <ul>
+            <li>Cartoon-themed balloon decorations</li>
+            <li>Customized photo booth tarpaulin</li>
+            <li>Loot bags for 30 kids</li>
+            <li>Prizes for games</li>
+            <li>Birthday cake</li>
+            <li>Party banners, balloons & hats</li>
+        </ul>
+
+        <h3>Services Included:</h3>
+        <ul>
+            <li>Clown / Mascot</li>
+            <li>Games & program facilitation</li>
+            <li>Sound system</li>
+            <li>Party coordinator</li>
+        </ul>
+
+        <p>Fun-filled party guaranteed for children.</p>
+
+        <button class="close-btn" onclick="closePopup(3)">Close</button>
+    </div>
+</div>
+<div id="popup4" class="popup-overlay">
+    <div class="popup-box">
+        <h2>Debut / Wedding Party Package – ₱25,999</h2>
+
+        <h3>Inclusions:</h3>
+        <ul>
+            <li>Customized stage backdrop & tarpaulin</li>
+            <li>Floral decorations (consumable flowers)</li>
+            <li>Souvenirs & giveaways</li>
+            <li>Printed programs</li>
+        </ul>
+
+        <h3>Services Included:</h3>
+        <ul>
+            <li>Professional sound system & lighting</li>
+            <li>Catering for 50 guests</li>
+            <li>Program host</li>
+            <li>Photographer & videographer</li>
+            <li>Event coordinator</li>
+        </ul>
+
+        <p>Perfect for once-in-a-lifetime celebrations.</p>
+
+        <button class="close-btn" onclick="closePopup(4)">Close</button>
+    </div>
+</div>
+<div id="popup5" class="popup-overlay">
+    <div class="popup-box">
+        <h2>Corporate Event Package – ₱30,999</h2>
+
+        <h3>Inclusions:</h3>
+        <ul>
+            <li>Customized stage & backdrop tarpaulin</li>
+            <li>Event banners & posters</li>
+            <li>Printed materials (programs, IDs if needed)</li>
+            <li>Souvenirs for participants</li>
+        </ul>
+
+        <h3>Services Included:</h3>
+        <ul>
+            <li>Projector & screen</li>
+            <li>Full professional sound system</li>
+            <li>Catering for 60 guests</li>
+            <li>Program host</li>
+            <li>Event coordinator</li>
+        </ul>
+
+        <p>Ideal for seminars, product launches, and company events.</p>
+
+        <button class="close-btn" onclick="closePopup(5)">Close</button>
+    </div>
+</div>
 
     </main>
 <script src="cart.js"></script>
@@ -90,6 +220,6 @@
         });
     });
 </script>
-
+<script src="productpopup.js"></script>
 </body>
 </html>
