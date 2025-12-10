@@ -5,9 +5,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: #f8f9fa;
-    color: #f1eded;
+    color: #0b1a38;
     border-radius:5px;
     border-color:#131314;
+    text-align: center;
 }
 
 header {
@@ -60,8 +61,8 @@ main {
 
 
 section {
-    background-color: #e88282;
-    color: #f8f9fa;
+    background-color: #FFFDD0;
+    color: #0b1a38;
     padding: 1rem;
     text-align: center;
     border-radius: 10px;
@@ -562,4 +563,18 @@ body.index-page .product-item img:hover {
     color: white;
     border-radius: 8px;
     cursor: pointer;
+}
+.centered-list {
+  list-style-position: inside; /* moves the bullets inside the text block */
+  text-align: center;          /* centers the text and bullets */
+  padding: 0;                  /* removes default padding */
+  margin: 0 auto;              /* centers the whole list if needed */
+}
+
+.centered-bullets {
+  text-align: center; /* centers all items */
+}
+
+.centered-bullets p {
+  margin: 5px 0; /* spacing between items */
 }
