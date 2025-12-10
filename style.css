@@ -69,6 +69,15 @@ section {
     border-radius: 10px;
 }
 
+
+sectionb {
+    background-color: #e88282;
+    color: #0b1a38;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
 .titlebox{
     background-color: #e88282;
     color: #0f0f0f;
@@ -337,23 +346,27 @@ body.index-page {
 /* HEADER */
 
 header .logo-area {
-    width: auto; /* allow the business name to size naturally */
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;   /* spacing */
 }
 
-/* Ensure the header title doesn't wrap awkwardly and looks consistent */
+header .logo-area .logo {
+    height: 40px;    /* small logo size */
+    width: auto;
+}
+
 header .logo-area h1 {
     margin: 0;
     color: inherit;
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;         /* increase the visible size */
+    font-size: 2rem;      
     font-weight: 700;
     line-height: 1.1;
-    white-space: normal;     /* allow wrapping on very small screens */
+    white-space: normal;  
     padding: 0.5rem 0;
 }
 
-/* make nav styles site-wide (previously index-only) */
 nav a:hover {
     text-decoration: underline;
 }
@@ -606,3 +619,7 @@ body.index-page .product-preview h2 {
             line-height: 1.6;
             color: #111;
         }
+.cart-page .gallery,
+.cart-page #cart-items {
+    background: #e88282; 
+}

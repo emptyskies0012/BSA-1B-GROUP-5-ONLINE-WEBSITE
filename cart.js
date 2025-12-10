@@ -57,7 +57,7 @@ function displayCart() {
     <!-- LEFT SIDE -->
     <div style="display:flex; align-items:center; gap:10px;">
         <button onclick="changeQty(${index}, -1)" style="width:40px;">-</button>
-        <span style="font-size:18px; font-weight:bold;">${item.quantity}</span>
+        <span style="color:white;font-size:18px; font-weight:bold;">${item.quantity}</span>
         <button onclick="changeQty(${index}, 1)" style="width:40px;">+</button>
     </div>
 

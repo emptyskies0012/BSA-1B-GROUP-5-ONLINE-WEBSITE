@@ -11,7 +11,7 @@
 </head>
 
 
-<body>
+<body class="cart-page">
 
 <a href="product.html" class="cart-btn" style="right:auto; left:20px;">⬅ Back</a>
 
@@ -32,15 +32,16 @@
     </button>
 </div>
 
-<section class="gallery">
-    <div id="cart-items"></div> </section>
+    <section class="gallery">
+        <div id="cart-items"></div> 
+    </section>
 
     <div class="checkout-area">
     <h2 style="color: black; font-weight: bold;">Total: ₱<span id="total">0</span></h2>
     <button class="purchase-btn" onclick="openPayment()">Purchase</button>
 </div>
 
-    </section>
+</section>
 </main>
 
 <script src="cart.js"></script>
@@ -76,7 +77,7 @@
 
         <br>
 
-        <button onclick="finalizeTransaction()">Check Out</button>
+        <button onclick="finalizeTransaction()">Confirm & Pay</button>
         <button onclick="closePayment()" class="close-btn">Close</button>
     </div>
 </div>
