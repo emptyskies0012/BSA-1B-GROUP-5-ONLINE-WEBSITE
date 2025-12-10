@@ -3,24 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <!-- Link to CSS -->
+    <title>Contact & FAQs</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+ 
 </head>
 <body>
-    <header>   
+<header>
+    <div class="logo-area">
         <h1>25th Hour Celebrations</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="product.html">Our Products</a>
-            <a href="aboutus.html">About Us</a>
-        </nav>
-    </header>
-   <main>
-             <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-start;">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Our Products</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<main>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>❓ Frequently Asked Questions (FAQs)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">1. How can I book an event with 25th Hour?</div>
+            <div class="faq-answer">You can book through Facebook page, Instagram, email, or contact number. Just send us your event details and preferred date.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">2. How early should I reserve my event date?</div>
+            <div class="faq-answer">We suggest booking 2–3 weeks in advance for better preparation and guaranteed availability.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">3. What payment methods are accepted?</div>
+            <div class="faq-answer">We accept Cash, GCash, and Maya.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">4. Are the packages customizable?</div>
+            <div class="faq-answer">Yes! You may customize your package based on your theme, budget, and preferences. Additional charges may apply.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">5. Do you accept rush bookings?</div>
+            <div class="faq-answer">Yes, subject to availability. Rush fees may apply.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">6. Who owns the decorations and party items after the event?</div>
+            <div class="faq-answer">All cakes, balloons, tarpaulins, hats, giveaways, souvenirs, posters, and decorations are owned by the client after the event. Only equipment like sound system, LED Wall, and lighting are for service use only.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">7. What areas do you serve?</div>
+            <div class="faq-answer">We are located in Daet, Camarines Norte and also cater nearby areas. Transportation fees may apply for out-of-town events.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">8. What is your cancellation policy?</div>
+            <div class="faq-answer">Cancellations must be made at least 3 days before the event. The down payment is non-refundable, but rescheduling may be allowed depending on the reason.</div>
+        </div>
+        <p style="text-align:center; margin-top:20px; font-family: 'Montserrat', sans-serif; font-weight:600;">💬 Still have questions? We’ll be happy to assist you below!</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section style="display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-start; max-width:1100px; margin:40px auto;">
         <!-- Left: online inquiry form -->
         <div style="flex:1 1 520px; min-width:300px; max-width:640px;">
           <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; letter-spacing:3px; text-align:left; margin:10px 0 20px 0;">ONLINE INQUIRY</h3>
@@ -39,13 +83,12 @@
               <button type="submit" style="background:#0b1a38;color:#fff;border:none;padding:10px 18px;border-radius:4px;cursor:pointer;font-weight:700;">
                 Submit
               </button>
-              <small style="color:#333;align-self:center;">We respond within 2 business days</small>
             </div>
           </form>
         </div>
 
         <!-- Right: contact details -->
-        <aside style="flex:0 0 320px; min-width:260px; max-width:360px; text-align:left;">
+        <aside style="flex:0 0 340px; min-width:260px; max-width:360px; text-align:left; margin-left: 20px;">
           <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; letter-spacing:3px; text-align:left; margin:10px 0 20px 0;">CONTACT DETAILS</h3>
 
           <div style="font-size:14px;color:#111;line-height:1.5;">
@@ -65,17 +108,30 @@
             <div style="margin-top:18px;">
               <strong style="display:block;margin-bottom:6px;">Camarines Norte</strong>
               <div style="font-size:16px;color:#333;">
-                123 Street,
-                Brgy. 1, Daet
+                123 Street, Brgy. 1, Daet
               </div>
-            </div>
             </div>
           </div>
         </aside>
-      </div>
-    </div>
-  </section>
-    </main>
+    </section>
 
-    </body>
+</main>
+
+<script>
+    // FAQ Accordion Functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+            item.classList.toggle('active');
+            const answer = item.querySelector('.faq-answer');
+            if (item.classList.contains('active')) {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
 </html>
