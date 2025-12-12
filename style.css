@@ -22,8 +22,9 @@ header {
 }
 
 footer {
-    background-color: #000033;
+    background-color: #CCCCCC;
     text-align: left;
+
 }
 
 nav a {
@@ -124,11 +125,70 @@ sectionb {
    FOOTER
 ------------------------------ */
 footer {
-    background-color: #333;
+    background-color: #1a1a1a;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     margin-top: 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    color: #1a1a1a;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #dea193;
+    transform: scale(1.1);
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #dea193;
+    text-decoration: none;
+}
+
+.copyright {
+    margin: 0;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+    font-size: 14px;
 }
 
 /* ------------------------------
@@ -360,9 +420,9 @@ header .logo-area h1 {
     margin: 0;
     color: inherit;
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;      
+    font-size: 2.5rem;      
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1;
     white-space: normal;  
     padding: 0.5rem 0;
 }
@@ -415,9 +475,11 @@ body.index-page .hero-content {
     color: #f8f5f1;
     text-align: center;
     font-size: larger;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added shadow for visibility */
 }
 
 body.index-page .hero-content h2 {
+    text-align: center;
     font-size: 1.5rem;  /* Make subtitle more prominent */
 }
 body.index-page .hero-content h1 {
@@ -471,7 +533,8 @@ body.index-page .product-preview h2 {
 .advantage-section {
     background-color: #FFFDD0; /* Cream */
     padding: 60px 20px;
-    text-align: center;
+    text-align: justify;
+    margin-bottom: 30px;
   }
 
   /* Container for layout */
@@ -483,6 +546,7 @@ body.index-page .product-preview h2 {
   /* Headline */
   .advantage-section .section-title {
     font-family: 'Playfair Display', serif;
+    text-align: center;
     color: #001F3F; 
     font-size: 36px;
     margin-bottom: 50px;
@@ -516,6 +580,7 @@ body.index-page .product-preview h2 {
 
   .advantage-section h3 {
     font-family: 'Playfair Display', serif;
+    text-align: center;
     color: #850518; /* Rose Gold */
     font-size: 22px;
     margin-bottom: 15px;
@@ -523,6 +588,7 @@ body.index-page .product-preview h2 {
 
   .advantage-section p {
     font-family: 'Cenzil', sans-serif;
+    text-align: justify;
     font-size: 16px;
     color: #333;
     line-height: 1.5;
@@ -577,7 +643,7 @@ body.index-page .product-preview h2 {
 }
         /* FAQ Accordion Styles */
         .faq-section {
-            max-width: 900px;
+            max-width: 700px;
             margin: 40px auto;
             padding: 13px;
         }
@@ -595,6 +661,7 @@ body.index-page .product-preview h2 {
             overflow: hidden;
         }
         .faq-question {
+            text-align: justify;
             padding: 15px 20px;
             cursor: pointer;
             font-family: 'Montserrat', sans-serif;
@@ -622,4 +689,72 @@ body.index-page .product-preview h2 {
 .cart-page .gallery,
 .cart-page #cart-items {
     background: #e88282; 
+}
+
+.testimonial-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    display: block; margin-left: auto; margin-right: auto;
+}
+.testimony-section {
+    background-color: #E9EEF4;
+    padding: 60px 20px;
+    text-align: justify;
+}
+
+.testimony-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimony-section .section-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #001F3F; 
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.testimony-section .section-title .subtitle {
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.testimony-section .columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimony-section .column {
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+.testimony-section .icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.testimony-section h3 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    color: #850518; /* Rose Gold */
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.testimony-section p {
+    font-family: 'Cenzil', sans-serif;
+    text-align: justify;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
 }
